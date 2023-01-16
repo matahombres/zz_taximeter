@@ -23,7 +23,6 @@
 ---
 # Configuration :clipboard:
 
-[details="Configuration"]
 ```
 Config = {}
 
@@ -89,7 +88,6 @@ Config.Rates = {
 }
 
 ```
-[/details]
 
 ---
 # Keybind :control_knobs:
@@ -116,27 +114,32 @@ Remember: You can change LCtrl
 https://streamable.com/vc6jdz
 
 
-[details="Feactures Preview"]
+### Feactures Preview
+
 * Animation for buttons and diferents taxes
+
 ![buttonAnim|548x232, 75%](https://forum.cfx.re/uploads/default/original/4X/a/2/c/a2c31e96d953423609e00cf2b63565a9b4da1ec7.gif)
 
 * Pause
+
 ![pause|562x252, 75%](https://forum.cfx.re/uploads/default/original/4X/6/1/1/611612a26dda90ff350dfc3720b8e7870ab3d0b4.gif)
 
 * Reset
+
 ![reset|554x240, 75%](https://forum.cfx.re/uploads/default/original/4X/0/d/a/0daa407a408626cfafe0747299bd05a6ad720df9.gif)
 
 * Keep when driver down or exit
+
 ![keepExit|690x339, 75%](https://forum.cfx.re/uploads/default/original/4X/f/8/d/f8d3e8ec01d528fe10dff48afede016f76213c6a.gif)
 
 * Save information when you exit from car
+
 ![saveInformationCompress|453x349, 75%](https://forum.cfx.re/uploads/default/original/4X/e/a/9/ea979c30954a07d55df445efe72174889fc0528d.gif)
 
 * Optimization (**WITH BASEEVENT**)
+
 ![optimization|690x224, 75%](https://forum.cfx.re/uploads/default/original/4X/e/b/4/eb49a68c5f7ee5e547b682053f5b11ab6b791684.gif)
 
-
-[/details]
 
 
 ---
