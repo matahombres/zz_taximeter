@@ -1,9 +1,9 @@
-![|552x208, 75%](upload://j8N5fE05sjWFtx7eBJmMpDuhmcO.gif)
+![|552x208, 75%](https://forum.cfx.re/uploads/default/original/4X/8/6/2/8627b8cb47c92eef0021f73128b5e83c8d09a72a.gif)
 
 # Taximeter system :taxi:
 ---
 
-![zz_scriptsGlow|690x262](upload://5jmII7oxjmqyerLvNMWnBtigZ13.png)
+![zz_scriptsGlow|690x262](https://forum.cfx.re/uploads/default/original/4X/2/5/3/253b4d6851a26c58ad0e765b477bf6bf4d0b48f5.png)
 
 ---
 
@@ -105,7 +105,7 @@ Change this to open the taximeter
 
 ----
 **Key for actuating buttons**: Left Control
-![image|508x89, 50%](upload://q01bfD4pDCQybP1BnBuwQ12DGE4.png)
+![image|508x89, 50%](https://forum.cfx.re/uploads/default/original/4X/b/6/3/b639131bf586a2cc445dfc64461316165d824d24.png)
 You have **8 buttons** and to activate them you need to do `LCtrl+1, LCtrl+2, LCtrl+3`...
 Remember: You can change LCtrl
 
@@ -118,22 +118,22 @@ https://streamable.com/vc6jdz
 
 [details="Feactures Preview"]
 * Animation for buttons and diferents taxes
-![buttonAnim|548x232, 75%](upload://ndRoi2EqU0BOFReMDtfIztDbTnx.gif)
+![buttonAnim|548x232, 75%](https://forum.cfx.re/uploads/default/original/4X/a/2/c/a2c31e96d953423609e00cf2b63565a9b4da1ec7.gif)
 
 * Pause
-![pause|562x252, 75%](upload://dQRBx2EbnOJl6wzCxTLkH9xZiHW.gif)
+![pause|562x252, 75%](https://forum.cfx.re/uploads/default/original/4X/6/1/1/611612a26dda90ff350dfc3720b8e7870ab3d0b4.gif)
 
 * Reset
-![reset|554x240, 75%](upload://1WSY8TjYOtzZ6YY4RVFP8WEtsQp.gif)
+![reset|554x240, 75%](https://forum.cfx.re/uploads/default/original/4X/0/d/a/0daa407a408626cfafe0747299bd05a6ad720df9.gif)
 
 * Keep when driver down or exit
-![keepExit|690x339, 75%](upload://zveqv3oXOKEXiEpRyDHNLeY7fOa.gif)
+![keepExit|690x339, 75%](https://forum.cfx.re/uploads/default/original/4X/f/8/d/f8d3e8ec01d528fe10dff48afede016f76213c6a.gif)
 
 * Save information when you exit from car
-![saveInformationCompress|453x349, 75%](upload://xtiyb2Z68N73ovmdrg8AiknjJ49.gif)
+![saveInformationCompress|453x349, 75%](https://forum.cfx.re/uploads/default/original/4X/e/a/9/ea979c30954a07d55df445efe72174889fc0528d.gif)
 
 * Optimization (**WITH BASEEVENT**)
-![optimization|690x224, 75%](upload://xzs04ABOERVg4CE8TcFXFq6uJIU.gif)
+![optimization|690x224, 75%](https://forum.cfx.re/uploads/default/original/4X/e/b/4/eb49a68c5f7ee5e547b682053f5b11ab6b791684.gif)
 
 
 [/details]
