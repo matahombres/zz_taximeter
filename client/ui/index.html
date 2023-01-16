@@ -1,0 +1,74 @@
+<head>
+	<script src="nui://game/ui/jquery.js" type="text/javascript">
+	</script>
+	<script src="index.js" type="text/javascript"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="reloadConfig()">
+  
+	<div class="metterContainer">
+		<div id="meter" style="display: none;">
+			<img src="assets/logo_zz.png" class="logo" />
+			<div class="boxMeter">
+				<div class="statusContainer">
+					<div class="status active" id="free">free</div>
+					<div class="status" id="occupied">occupied</div>
+					<div class="status" id="stopped">stopped</div>
+				</div>
+				<div class="numbersContainer">
+					<div class="rate">
+						<div class="numberList rateSel" id="rate"></div>
+						<div class="numberLabel">
+							<div class="titleNumber"></div>
+							<div class="subtitleLabel" id="rateLabel">rate</div>
+						</div>
+					</div>
+					<div class="priceAmount">
+						<div class="numberList totalPrice" id="price"></div>
+						<div class="numberLabel">
+							<div class="titleNumber" id="currency">$</div>
+							<div class="subtitleLabel anothesColor" id="distance">MI</div>
+						</div>
+					</div>
+				</div>
+				<div class="buttonsContainer">
+					<div class="button">
+						<div class="labelBtn" id="labelBtn1">1</div>
+						<button class="circularBtn" id="btn1"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn2">2</div>
+						<button class="circularBtn" id="btn2"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn3">3</div>
+						<button class="circularBtn" id="btn3"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn4">4</div>
+						<button class="circularBtn" id="btn4"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn5">5</div>
+						<button class="circularBtn" id="btn5"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn6">6</div>
+						<button class="circularBtn" id="btn6"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn7">P</div>
+						<button class="circularBtn" id="btn7"></button>
+					</div>
+					<div class="button">
+						<div class="labelBtn" id="labelBtn8">R</div>
+						<button class="circularBtn" id="btn8"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
