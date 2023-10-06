@@ -16,7 +16,7 @@ Config.taximeterDefaultKey = "F7"
 Config.taximeterBtnDefaultKey = "LCONTROL"
 
 -- IF YOU HAVE BASEEVENTS, I RECOMMENDED TURN TRUE
-Config.baseevents = true
+Config.baseevents = false
 
 -- Vehicles to working taximeter
 Config.AuthorizedVehicles = {
