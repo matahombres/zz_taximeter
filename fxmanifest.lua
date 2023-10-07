@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'matahombress'
 description 'Taximeter'
-version '1.0.0'
+version '1.0.1'
 ui_page 'client/ui/index.html'-- NUI
 
 shared_scripts {
