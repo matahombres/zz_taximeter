@@ -1,5 +1,6 @@
 const resource = GetParentResourceName();
 var formatMoney = "es-ES"
+var indexBtn = 1;
 
 async function fetchNui(eventName, data) {
   const resp = await fetch(`https://${resource}/${eventName}`, {
@@ -52,6 +53,31 @@ $(function() {
             case "menuOpacityActive":
                 $("#meter").addClass("menuOpen")
             break;
+            case "focus_active":
+                $($(".buttonsContainer .button")[indexBtn-1]).addClass("focus");
+            break;
+            case "focus_disable":
+                $(".buttonsContainer .button.focus").removeClass("focus");
+            break;
+            case "left_arrow":
+                indexBtn = indexBtn - 1
+                if (indexBtn < 1){
+                    indexBtn = 8;
+                }
+                $(".buttonsContainer .button.focus").removeClass("focus");
+                $($(".buttonsContainer .button")[indexBtn-1]).addClass("focus");
+            break;
+            case "right_arrow":
+                indexBtn = indexBtn + 1
+                if (indexBtn > 8){
+                    indexBtn = 1;
+                }
+                $(".buttonsContainer .button.focus").removeClass("focus");
+                $($(".buttonsContainer .button")[indexBtn-1]).addClass("focus");
+            break;
+            case "enter_btn":
+                fetchNui("selectBtn",{numberBtn:indexBtn});
+            break;
             case "menuOpacityDisabled":
                 $("#meter").removeClass("menuOpen")
             break;
@@ -99,6 +125,7 @@ $(function() {
                 $("#meter").show();
             break;
             case 'close':
+                $(".buttonsContainer .button.focus").removeClass("focus");
                 $("#meter").hide();
             break;
         }

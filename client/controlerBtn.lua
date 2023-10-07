@@ -1,51 +1,70 @@
 local listenButton = false
-local Numbers = { ["1"] = 157, ["2"] = 158, ["3"] = 160, ["4"] = 164, ["5"] = 165, ["6"] = 159, ["7"] = 161, ["8"] = 162 }
 
 RegisterKeyMapping("taximeter", translate("keyMappingTaximeter"), "keyboard", Config.taximeterDefaultKey)
-RegisterKeyMapping("+taximeterBtn", translate("keyMappingBtn"), "keyboard", Config.taximeterBtnDefaultKey)
+RegisterKeyMapping("taximeterBtn", translate("keyMappingBtn"), "keyboard", Config.taximeterBtnDefaultKey)
 
 
 
 RegisterCommand('taximeter', function()
-	local playerPed = PlayerPedId()
 
-	if IsPedInAnyVehicle(playerPed, false) and IsDriver(playerPed) and IsInAuthorizedVehicle(GetVehiclePedIsIn(playerPed,false)) then
+	if canInteractUI(PlayerPedId()) then
 		TriggerServerEvent('zz_taximeter:toggleTaximeter')
 	end
 	
 end, false)
 
+RegisterCommand('taximeterBtn',function()
+	listenButton = not listenButton
+	if listenButton and canInteractUI(PlayerPedId()) then
+		SendNUIMessage({type = "focus_active" })
+	else
+		SendNUIMessage({type = "focus_disable" })
+	end
+	activeListener()
+end)
 
-
-RegisterCommand('-taximeterBtn', function()
-	listenButton=false
-end,false)
-
-RegisterCommand('+taximeterBtn', function()
-	listenButton = true
-	local playerPed = PlayerPedId()
-	local veh = nil
+function activeListener()
 	Citizen.CreateThread(function()
 		while listenButton do
-      		Citizen.Wait(1)
-			if not (IsPedInAnyVehicle(playerPed, false) and IsDriver(playerPed) and IsInAuthorizedVehicle(GetVehiclePedIsIn(playerPed,false))) then
+			Citizen.Wait(1)
+			if not (canInteractUI(PlayerPedId())) then
 				listenButton = false
 			else
-				for key, numKey in pairs(Numbers) do
-					if IsControlJustReleased(0, numKey) then 
-						local veh = GetVehiclePedIsIn(playerPed,false)
-						local vehNet = VehToNet(veh)
-						if key == "7" then
-							TriggerServerEvent('zz_taximeter:pause', vehNet)
-						elseif key == "8" then
-							TriggerServerEvent('zz_taximeter:reset', vehNet)
-						else
-							TriggerServerEvent('zz_taximeter:selectRate', vehNet, key)
-						end
-						Citizen.Wait(500)
-					end
+				if IsControlJustReleased(0, 174) then -- LEFT ARROW
+					SendNUIMessage({type = "left_arrow" })
+					Citizen.Wait(200)
+				end
+				if IsControlJustReleased(0, 175) then -- RIGHT ARROW
+					SendNUIMessage({type = "right_arrow" })
+					Citizen.Wait(200)
+				end
+				if IsControlJustReleased(0, 176) then -- ENTER BTN
+					SendNUIMessage({type = "enter_btn" })
+					Citizen.Wait(200)
 				end
 			end
 		end
 	end)
-end,false)
+end
+
+function canInteractUI(playerPed)
+	return IsPedInAnyVehicle(playerPed, false) and IsDriver(playerPed) and IsInAuthorizedVehicle(GetVehiclePedIsIn(playerPed,false))
+end
+
+RegisterNUICallback('selectBtn',function(data,cb)
+	local playerPed = PlayerPedId()
+	local veh = nil
+	local number = tostring(data['numberBtn'])
+	if IsPedInAnyVehicle(playerPed, false) and IsDriver(playerPed) and IsInAuthorizedVehicle(GetVehiclePedIsIn(playerPed,false)) then
+		local veh = GetVehiclePedIsIn(playerPed,false)
+		local vehNet = VehToNet(veh)
+		if number == "7" then
+			TriggerServerEvent('zz_taximeter:pause', vehNet)
+		elseif number == "8" then
+			TriggerServerEvent('zz_taximeter:reset', vehNet)
+		else
+			TriggerServerEvent('zz_taximeter:selectRate', vehNet, number)
+		end
+	end
+	cb("ok")
+end)

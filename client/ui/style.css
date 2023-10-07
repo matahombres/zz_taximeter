@@ -51,6 +51,9 @@
 .button{
     flex: 1;
 }
+.button.focus .circularBtn {
+    outline:2px solid #d1d1d1;
+}
 .labelBtn{
     color: #DD7F34;
     text-shadow: 0 0 8px #DD7F34, 0 0 20px #ffffff;
